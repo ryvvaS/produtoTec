@@ -23,6 +23,6 @@ const Celula = db.define('Celula',{
     }
 });
 
-Celula.sync({alter: true})
+// Celula.sync({alter: true})
 
 module.exports = Celula;
