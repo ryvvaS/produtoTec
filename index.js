@@ -3,6 +3,8 @@ const Cell = require("./Controller/cellController");
 const User = require("./Controller/pesquisadorController");
 const handlebars = require('express-handlebars');
 const { dirname } = require('path');
+// const { path } = require('express/lib/application');
+const path = require('path');
 const server = express();
 
 var hbs = handlebars.create({defaultLayout: 'main'});
@@ -17,6 +19,7 @@ server.use(
     }),
 )
 server.use(express.json());
+server.use(express.static(path.join(__dirname, 'Resourcer')))
 
 
 server.get("/style",function(req,res){
