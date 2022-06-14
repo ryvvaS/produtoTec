@@ -14,7 +14,7 @@ form{
     width: 696px;
     height: 515px;
     left: 528px;
-    top: 150px;
+    top: 250px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -102,14 +102,15 @@ input[type=submit]{
     font-size: 48px;
     line-height: 57px;
     color: white;
-
+    border: 0px;
     background-color: #004F95;
     border-radius: 16px;
 }
 
+
 #topBar{
     display: flex;
-    position: absolute;
+    position:relative;
     width: 1792px;
     height: 57px;
     left: 0px;
@@ -118,3 +119,41 @@ input[type=submit]{
     background: #353A3F;
 
 }
+
+
+#LoginButton{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+position: absolute;
+width: 59px;
+height: 33px;
+left: 1546px;
+top: 11px;
+
+background: rgba(190, 190, 190, 0.44);
+border: 0px;
+border-radius: 4px;
+}
+
+#CadastroButton{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 9px;
+gap: 10px;
+
+position: absolute;
+width: 109px;
+height: 33px;
+left: 1620px;
+top: 11px;
+
+background: #004F95;
+border: 0px;
+border-radius: 4px;
+}
+

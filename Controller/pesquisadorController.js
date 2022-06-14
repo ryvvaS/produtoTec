@@ -12,7 +12,7 @@ router.use(express.json());
 
 router.get("/Cadastrar",function(req,res){
     
-    res.render('Cadastrar');
+    res.render('CadastroLogin/Cadastrar');
 });
 
 router.post('/Cadastrar', async (req, res)=>{
@@ -27,13 +27,13 @@ router.post('/Cadastrar', async (req, res)=>{
     console.log(usuario.name);
     try{
         await User.create(usuario);
-        res.render("Login");
+        res.render("CadastroLogin/Login");
     }catch{console.log("dados nao recebido")}
     
     
 })
 router.get("/Login",function(req,res){
-    res.render('Login');
+    res.render('CadastroLogin/Login');
 });
 
 router.post('/Login', async (req, res)=>{

@@ -23,7 +23,10 @@ server.get("/style",function(req,res){
     res.sendFile(__dirname+"/CSS/style.css");
 })
 
+
+
 server.get("/",function(req,res){
+   
     res.render('inicial');
 });
 
