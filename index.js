@@ -33,6 +33,11 @@ server.get("/",function(req,res){
     res.render('inicial');
 });
 
+server.get("/equipe",function(req,res){
+   
+    res.render('Equipe/equipe');
+});
+
 server.get("/inicial",function(req,res){
     res.render('inicial');
 });

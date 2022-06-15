@@ -103,7 +103,7 @@ input[type=submit]{
 #topBar{
     display: flex;
     position:relative;
-    width: 1792px;
+    width:auto;
     height: 57px;
     left: 0px;
     top: 0px;
@@ -155,7 +155,59 @@ border-radius: 4px;
     box-sizing: border-box;
 }
 
-/*=====================Bodys=====================*/
+/*=============================tela equipes================================*/
+
+.pai{
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+
+
+.integrante{
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+}
+
+#integranteImg{
+    /* padding: 10px; */
+    border-radius: 50%;
+}
+
+#f1{
+    height: 500px;
+    width: 500px;
+   
+}
+
+.f2{
+    height: 500px;
+    width: 600px; 
+    
+}
+
+.featurette-heading{
+    font-size: 40px;
+    color: white;
+}
+
+.text-muted{
+    font-size: 40px;
+    color: rgba(161, 160, 160, 1);
+}
+
+.lead{
+    font-size: 20px;
+    color: white;
+}
+
+
+
+/*=============================Bodys================================*/
 #main{
     overflow: hidden;
     width: 100%;
@@ -166,3 +218,8 @@ border-radius: 4px;
     right: 0px;
 }
 
+#equipeBody{
+    
+    background-color: #384047;
+    overflow-x:hidden;
+}
