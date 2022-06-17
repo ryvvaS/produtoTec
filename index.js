@@ -1,5 +1,4 @@
 const express = require('express');
-
 const handlebars = require('express-handlebars');
 const { dirname } = require('path');
 // const { path } = require('express/lib/application');
@@ -32,7 +31,6 @@ server.use(express.static(path.join(__dirname, 'Resourcer')))
 server.get("/style",function(req,res){
     res.sendFile(__dirname+"/CSS/style.css");
 })
-
 
 
 server.get("/",function(req,res){
