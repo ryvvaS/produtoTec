@@ -21,14 +21,10 @@ const Pesquisador = db.define('Pesquisador',{
     senha:{
         type: Sequelize.STRING,
         allowNull: false
-    },
-    idCelulas:{
-        type: [Sequelize.INTEGER],
-        unique: true
     }
     
 });
 
-// Pesquisador.sync({alter: true})
+// await Pesquisador.sync({force: true})
 
 module.exports = Pesquisador;
