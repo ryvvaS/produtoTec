@@ -6,12 +6,10 @@ const path = require('path');
 const server = express();
 
 (async () =>{
-    const Cell = require("./Controller/cellController");
-    const User = require("./Controller/pesquisadorController");
+    const routes = require("./Controller/routes");
     const database = require("./DataBase/db");
-    await database.sync({force: true});
-    server.use(User);
-    server.use(Cell);
+    await database.sync({alter: true});
+    server.use(routes)
 })();
 
 var hbs = handlebars.create({defaultLayout: 'main'});
@@ -33,19 +31,7 @@ server.get("/style",function(req,res){
 })
 
 
-server.get("/",function(req,res){
-   
-    res.render('inicial');
-});
 
-server.get("/equipe",function(req,res){
-   
-    res.render('Equipe/equipe');
-});
-
-server.get("/inicial",function(req,res){
-    res.render('inicial');
-});
 
 
 
