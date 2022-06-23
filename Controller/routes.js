@@ -19,29 +19,38 @@ router.use(express.json());
 //MARK: Home -----------------------------------------------------------------
 router.get("/inicial",function(req,res){
     console.log(usuario);
-    res.render("inicial");
+    res.render("inicial",{logado: usuario.logado});
 });
 
 
 router.get("/",function(req,res){
    
-    res.render('inicial');
+    res.render('inicial',{logado: usuario.logado});
 });
 
+//MARK: Sair -----------------------------------------------------------------
+router.get("/sair",function(req,res){
+    usuario.logado = false
+    res.render('inicial',{logado: usuario.logado});
+});
 
 
 //MARK: Equipe -----------------------------------------------------------------
 router.get("/equipe",function(req,res){
    
-    res.render('Equipe/equipe');
+    res.render('Equipe/equipe',{logado: usuario.logado});
 });
 
 
 
 //MARK: CADASTRO ----------------------------------------------------------------
 router.get("/Cadastrar",function(req,res){
+    if(usuario.logado){
+        res.render('inicial',{logado: usuario.logado});
+    }else{
+        res.render('CadastroLogin/Cadastrar');
+    }
     
-    res.render('CadastroLogin/Cadastrar');
 });
 
 router.post('/Cadastrar', async (req, res)=>{
@@ -64,7 +73,12 @@ router.post('/Cadastrar', async (req, res)=>{
 
 //MARK: Login -------------------------------------------------------------------
 router.get("/Login",function(req,res){
-    res.render('CadastroLogin/Login');
+    if(usuario.logado){
+        res.render('inicial',{logado: usuario.logado});
+    }else{
+        res.render('CadastroLogin/Login');
+    }
+    
 });
 
 router.post('/Login', async (req, res)=>{
@@ -79,7 +93,7 @@ router.post('/Login', async (req, res)=>{
     usuario.name = user.name;
     usuario.logado = true;
     console.log(user.name); // 'My Title'
-    res.render("inicial");
+    res.render("inicial",{logado: usuario.logado});
   } 
     
 })

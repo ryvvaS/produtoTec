@@ -2,8 +2,13 @@
     <div class="topBar">
         <a href="inicial">Home</a><br>
         <a href="equipe">Equipe</a><br>
+        {{#unless logado}}
         <a id="CadastroButton" href="Cadastrar">Cadastrar-se</a><br>
         <a id="LoginButton" href="Login">Entrar</a><br>
+        {{/unless}}
+        {{#if logado}}
+        <a href="sair">Sair</a><br>
+        {{/if}}
         
     </div>
 </header>
