@@ -26,10 +26,10 @@ form{
 
 #name{
     
-width: 696px;
-height: 57px;
-left: 0px;
-top: 57px;
+    width: 696px;
+    height: 57px;
+    left: 0px;
+    top: 57px;
 
     background: #646464;
     border-radius: 16px;
@@ -219,4 +219,51 @@ border-radius: 4px;
     
     background-color: #384047;
     overflow-x:hidden;
+}
+
+.addCelula{
+    display: flex;
+    justify-content: space-around;
+}
+.addCelula label{
+    color: white;
+    font-size: 30px;
+}
+
+.addCelula #tipo{
+    width: 696px;
+    height: 57px;
+    left: 0px;
+    top: 57px;
+
+    background: #646464;
+    border-radius: 16px;
+    border: 0px;
+
+    padding: 20px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: white;
+}
+
+.addCelula #date{
+    width: 696px;
+    height: 57px;
+    left: 0px;
+    top: 57px;
+
+    background: #646464;
+    border-radius: 16px;
+    border: 0px;
+
+    padding: 20px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: white;
 }

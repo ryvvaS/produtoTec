@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParse = require("body-parser");
 const User = require("../Model/Pesquisador");
-const Cell = require("../Model/Celula");
+// const Cell = require("../Model/Celula");
 const urlencodeParser = bodyParse.urlencoded({extended:false});
 const router = express.Router();
 
@@ -18,7 +18,6 @@ router.use(express.json());
 
 //MARK: Home -----------------------------------------------------------------
 router.get("/inicial",function(req,res){
-    console.log(usuario);
     res.render("inicial",{logado: usuario.logado});
 });
 
@@ -55,14 +54,12 @@ router.get("/Cadastrar",function(req,res){
 
 router.post('/Cadastrar', async (req, res)=>{
 
-    console.log(req.body);
     res.render("inicial");
     const usuario = {
         name: req.body.name,
         email: req.body.email,
         senha: req.body.senha
     }
-    console.log(usuario.name);
     try{
         await User.create(usuario);
         res.render("CadastroLogin/Login");
@@ -82,7 +79,6 @@ router.get("/Login",function(req,res){
 });
 
 router.post('/Login', async (req, res)=>{
-    console.log(req.body);
     user = await User.findOne({where: {email: req.body.email, senha: req.body.senha}});
 
    if (user === null) {
@@ -92,29 +88,52 @@ router.post('/Login', async (req, res)=>{
     usuario.id = user.id;
     usuario.name = user.name;
     usuario.logado = true;
-    console.log(user.name); // 'My Title'
     res.render("inicial",{logado: usuario.logado});
   } 
     
 })
 
 //MARK: Celulas ----------------------------------------------------------------
-router.post('/addCell', async (req, res)=>{
+router.get("/addCelulas",function(req,res){
+    if(usuario.logado){
+        res.render('CelulasScreem/addCelulas');
+        
+    }else{
+        res.render('inicial',{logado: usuario.logado});
+    }
+    
+});
+
+router.post('/addCelulas', async (req, res)=>{
     console.log(req.body);
     const celula ={
         name: req.body.name,
         tipo: req.body.tipo,
-        dataColeta: req.body.dataColeta,
-        idPesquisador: 1
-        // idPesquisador: usuario.id
+        dataColeta: req.body.date,
+        // idPesquisador: 1
+        idPesquisador: usuario.id
     }
-    await Cell.create(celula);
+    await Celula.create(celula);
+    res.render('inicial',{logado: usuario.logado});
+    
+});
+
+router.get('/mostrarCelulas', async (req, res)=>{
+    if(usuario.logado){
+        const pesquisador = await User.findByPk(usuario.id, {include: Celula}); 
+        console.log(pesquisador.Celulas);
+        res.render('CelulasScreem/mostrarCelulas',{data: pesquisador.Celulas});
+        // return res.json(pesquisador.celula);
+    }else{
+        res.render('inicial',{logado: usuario.logado});
+    }
     
 });
 
 router.get('/mostrar', async (req, res)=>{
     const pesquisador = await User.findByPk(1, {include: Celula}); // alterar a pk de 1 para usuario.id
-    return res.json(pesquisador.celula);
+    
+    return res.json(pesquisador.Celulas);
 });
 
 module.exports = router

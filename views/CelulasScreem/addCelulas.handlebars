@@ -1,0 +1,34 @@
+<header >
+    <div class="topBar">
+        
+        <a href="inicial">Home</a><br>
+        <a href="equipe">Equipe</a><br>
+        <a href="addCelulas">AddCelula</a><br>
+        <a href="mostrarCelulas">CelulasList</a><br>
+        <a href="sair">Sair</a><br>
+
+    </div>
+</header>
+
+
+<body id="main">
+    <div class="addCelula">
+       <h1 style="color: white;
+              padding: 20px; position: absolute;
+              left: 803px;
+              top: 154px;
+              ">
+              Adicionar Celula
+       </h1>
+        <form name="form3" action="addCelulas" method="post">
+            <label>Nome da celula</label>
+            <input type="text" name="name" id="name" placeholder="Nome da celula:"><br>
+            <label>Tipo da celula</label>
+            <input type="text" name="tipo" id="tipo" placeholder="Tipo de celula:"><br>
+            <label>data da coleta</label>
+            <input type="date" name="date" id="date" ><br>
+            <input type="submit" name="btnSubmit" id="btnSubmit" value="addCelulas"><br>
+        </form>
+   </div>
+
+</body>

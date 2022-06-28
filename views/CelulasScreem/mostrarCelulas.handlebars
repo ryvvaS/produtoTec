@@ -1,0 +1,40 @@
+<header >
+    <div class="topBar">
+        
+        <a href="inicial">Home</a><br>
+        <a href="equipe">Equipe</a><br>
+        <a href="addCelulas">AddCelula</a><br>
+        <a href="mostrarCelulas">CelulasList</a><br>
+        <a href="sair">Sair</a><br>
+
+    </div>
+</header>
+
+
+<body id="main">
+     {{!-- {{#each data}}
+        <b>{{this.name}}</b>
+    {{/each}} --}}
+
+    {{!-- {{#each data}}
+        <h1>bom dia</h1>
+        <li>{{this}}</li>
+        {{this.data.name}}
+    {{/each}} --}}
+    {{#each data}}
+        {{!-- {{#with this}}
+            <h1>bom dia</h1>
+            <li>{{this}}</li>
+            <h1>{{id}}</h1>
+        {{/with}} --}}
+        
+       
+    {{/each}}
+    {{!-- {{#with data}}
+        <h1>bom dia</h1>
+        <li>{{this}}</li>
+        {{this.name}}
+    {{/with}} --}}
+    
+    
+</body>
