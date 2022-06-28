@@ -12,29 +12,22 @@
 
 
 <body id="main">
-     {{!-- {{#each data}}
-        <b>{{this.name}}</b>
-    {{/each}} --}}
-
-    {{!-- {{#each data}}
-        <h1>bom dia</h1>
-        <li>{{this}}</li>
-        {{this.data.name}}
-    {{/each}} --}}
-    {{#each data}}
-        {{!-- {{#with this}}
-            <h1>bom dia</h1>
-            <li>{{this}}</li>
-            <h1>{{id}}</h1>
-        {{/with}} --}}
+         <ul>
+            <li>Nome</li>
+            <li>Tipo</li>
+            <li>Data da Coleta</li>
+         </ul>
+        <br>
+     {{#each data}}
+        {{#each this}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{tipo}}</td>
+            <td>{{dataColeta}}</td>
+        </tr>
         
-       
+        {{/each}}
     {{/each}}
-    {{!-- {{#with data}}
-        <h1>bom dia</h1>
-        <li>{{this}}</li>
-        {{this.name}}
-    {{/with}} --}}
-    
+
     
 </body>

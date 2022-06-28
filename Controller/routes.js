@@ -121,7 +121,6 @@ router.post('/addCelulas', async (req, res)=>{
 router.get('/mostrarCelulas', async (req, res)=>{
     if(usuario.logado){
         const pesquisador = await User.findByPk(usuario.id, {include: Celula}); 
-        console.log(pesquisador.Celulas);
         res.render('CelulasScreem/mostrarCelulas',{data: pesquisador.Celulas});
         // return res.json(pesquisador.celula);
     }else{
