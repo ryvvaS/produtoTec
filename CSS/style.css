@@ -267,3 +267,21 @@ border-radius: 4px;
     line-height: 43px;
     color: white;
 }
+
+.tituloCelulas{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+    width: 100%;
+    color: white;
+}
+
+.mostrarCelula{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 20px;
+    width: 100%;
+    
+}

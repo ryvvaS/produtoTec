@@ -12,22 +12,18 @@
 
 
 <body id="main">
-         <ul>
-            <li>Nome</li>
-            <li>Tipo</li>
-            <li>Data da Coleta</li>
-         </ul>
-        <br>
-     {{#each data}}
-        {{#each this}}
-        <tr>
-            <td>{{name}}</td>
-            <td>{{tipo}}</td>
-            <td>{{dataColeta}}</td>
-        </tr>
-        
-        {{/each}}
-    {{/each}}
-
-    
+    <div class="tituloCelulas">
+        <h1>Nome</h1>
+        <h1>Tipo</h1>
+        <h1>Data da Coleta</h1>
+    </div>
+        {{#each data}}
+                {{#each this}}
+                <div class="mostrarCelula">
+                    <h3>{{name}}</h3>
+                    <h3>{{tipo}}</h3>
+                    <h3>{{dataColeta}}</h3>
+                </div>   
+                {{/each}}
+        {{/each}}  
 </body>
