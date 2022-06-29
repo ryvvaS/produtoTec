@@ -8,7 +8,7 @@ const server = express();
 (async () =>{
     const routes = require("./Controller/routes");
     const database = require("./DataBase/db");
-    await database.sync({alter: true});
+    await database.sync();
     server.use(routes)
 })();
 
