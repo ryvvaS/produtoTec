@@ -1,0 +1,159 @@
+*{margin: 0; padding: 0; box-sizing: border-box; background: #384047;}
+
+/* h1{color: darkred; width: 100%; text-align: center;} */
+
+a{
+    background-color: #353a3f00;
+    color: white;
+    padding: 20px;
+    
+}
+
+form{
+    position: absolute;
+    width: 696px;
+    height: 515px;
+    left: 528px;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 21px;
+
+    
+    
+}
+
+
+#name{
+    
+width: 696px;
+height: 57px;
+left: 0px;
+top: 57px;
+
+    background: #646464;
+    border-radius: 16px;
+    border: 0px;
+
+    padding: 20px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: white;
+}
+
+#senha{
+    
+    width: 696px;
+    height: 57px;
+    left: 0px;
+    top: 57px;
+    background: #646464;
+    border-radius: 16px;
+    border: 0px;
+    padding: 20px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: white;
+}
+
+#email{
+    width: 696px;
+    height: 57px;
+    left: 0px;
+    top: 57px;
+    background: #646464;
+    border-radius: 16px;
+    border: 0px;
+    padding: 20px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 43px;
+    color: white;
+}
+
+input[type=submit]{
+    /* position: absolute;
+    width: 400px;
+    height: 94px;
+    left: 696px;
+    top: 874px; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 18px 88px;
+    gap: 10px;
+    width: 399px;
+    height: 93px;
+    left: 696px;
+    top: 874px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 57px;
+    color: white;
+    border: 0px;
+    background-color: #004F95;
+    border-radius: 16px;
+}
+
+
+#topBar{
+    display: flex;
+    position:relative;
+    width: 1792px;
+    height: 57px;
+    left: 0px;
+    top: 0px;
+
+    background: #353A3F;
+
+}
+
+
+#LoginButton{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px;
+gap: 10px;
+
+position: absolute;
+width: 59px;
+height: 33px;
+left: 1546px;
+top: 11px;
+
+background: rgba(190, 190, 190, 0.44);
+border: 0px;
+border-radius: 4px;
+}
+
+#CadastroButton{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 8px 9px;
+gap: 10px;
+
+position: absolute;
+width: 109px;
+height: 33px;
+left: 1620px;
+top: 11px;
+
+background: #004F95;
+border: 0px;
+border-radius: 4px;
+}
+

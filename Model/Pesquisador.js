@@ -29,6 +29,6 @@ const Pesquisador = db.define('Pesquisador',{
     
 });
 
-Pesquisador.sync({alter: true})
+// Pesquisador.sync({alter: true})
 
 module.exports = Pesquisador;
